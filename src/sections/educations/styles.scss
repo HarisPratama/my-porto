@@ -1,0 +1,194 @@
+.Projects, .Projects-out {
+	overflow-y: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: block;
+	z-index: 70;
+	background: #2c3e50;
+	transition: 1s;
+	
+	.content {
+		.title {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			color: #fff;
+
+			div {
+				cursor: pointer;
+			}
+		}
+
+		.item {
+			position: relative;
+			z-index: 10;
+
+			&::after{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: #34495e;
+				filter: blur(50px);
+				z-index: -1;
+			}
+
+			.iscoot-project {
+				padding: 40px;
+				width: 100%;
+				display: flex;
+				gap: 20px;
+				height: 480px;
+				
+				.desc {
+					width: 100%;
+
+					.tech {
+						display: flex;
+						flex-direction: column;
+						gap: 20px;
+					}
+				}
+
+				.images {
+					display: flex;
+					gap: 20px;
+					width: 100%;
+				}
+			}
+
+			.oku-project {
+				padding: 40px;
+				width: 100%;
+				display: flex;
+				gap: 20px;
+				height: 480px;
+				
+				.desc {
+					width: 100%;
+
+					.tech {
+						display: flex;
+						flex-direction: column;
+						gap: 20px;
+					}
+				}
+
+				.images {
+					width: 100%;
+					img {
+						height: 500px;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.Projects {
+
+	.content {
+
+		h5 {
+			animation: slideToTopWithOpacity .7s;
+		}
+		
+		.item {
+			animation: slideToTopWithOpacity 1s;
+			
+			.iscoot-project {
+				.img-1 {
+					animation: slideToTopWithOpacity 1.8s;
+				}
+				.img-2 {
+					animation: slideToTopWithOpacity 2.2s;
+				}
+				.img-3 {
+					animation: slideToTopWithOpacity 2.6s;
+				}
+			}
+		}
+	}
+}
+
+.Projects-out {
+	
+	.content {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s 1.4s, opacity 1.4s linear;
+		animation: slideOutToLeft 1.4s;
+
+		.title {
+			h5 {
+				animation: slideOutToLeft 1.4s;
+				font-weight: 400;
+				color: #95a5a6;
+				font-weight: 700;
+			}
+		}
+		
+		.item {
+			animation: slideOutToLeft 1.4s;
+
+			.iscoot-project {
+				.img-1 {
+					animation: slideOutToLeft 1.8s;
+				}
+				.img-2 {
+					animation: slideOutToLeft 2.2s;
+				}
+				.img-3 {
+					animation: slideOutToLeft 2.6s;
+				}
+			}
+		}
+	}
+
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 1.4s, opacity 1.4s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .Projects, .Projects-out {
+		.content {
+			display: block;
+		}
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .Projects, .Projects-out {
+		.content {
+			max-width: 1100px;
+			margin: auto;
+		}
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .Projects, .Projects-out {
+		.content {
+			max-width: 1300px;
+			margin: auto;
+		}
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .Projects, .Projects-out {
+		.content {
+			max-width: 1500px;
+			margin: auto;
+		}
+  }
+}

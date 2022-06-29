@@ -1,0 +1,100 @@
+.Education, .Education-out {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+	
+	.content {
+		padding: 20px;
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		height: 100vh;
+
+		.item {
+			margin-top: 40px;
+			
+
+			h1, h3 {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.Education {
+
+	.content {
+
+		h5 {
+			animation: slideToTopWithOpacity 1s;
+		}
+		
+		.item {
+			h1 {
+				animation: slideToTopWithOpacity 1.4s;
+			}
+			h3 {
+				animation: slideToTopWithOpacity 1.8s;
+			}
+		}
+	}
+}
+
+.Education-out {
+	
+	.content {
+
+		h5 {
+			animation: slideOutToLeft 1.4s;
+			font-weight: 400;
+			color: #95a5a6;
+			font-weight: 700;
+		}
+		
+		.item {
+			animation: slideOutToLeft 1.4s;
+		}
+	}
+
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 1.4s, opacity 1.4s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .Education, .Education-out {
+		.content {
+			display: block;
+		}
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .Education, .Education-out {
+		.content {
+			max-width: 1100px;
+			margin: auto;
+		}
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .Education, .Education-out {
+		.content {
+			max-width: 1300px;
+			margin: auto;
+		}
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .Education, .Education-out {
+		.content {
+			max-width: 1500px;
+			margin: auto;
+		}
+  }
+}

@@ -1,0 +1,346 @@
+.Introduction, .Introduction-out {
+	height: 100vh;
+	overflow-y: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: auto 0px;
+	display: flex;
+	gap: 20px;
+	z-index: 80;
+
+	.my-picture {
+		img {
+			height: 100vh;
+			animation: slideToTop 1.4s;
+		}
+	}
+
+	@keyframes toFullWidth {
+		from {
+			width: 20px;
+		}
+		to {
+			width: 1px;
+		}
+	}
+
+	// .divider {
+	// 	width: 1px;
+	// 	background: #fff;
+	// 	animation: toFullWidth 1.4s;
+	// }
+
+	.biodata {
+		padding: 20px;
+		margin: auto 0;
+		h1 {
+			font-weight: 700;
+			margin: 0;
+			font-size: 86px;
+			color: #fff;
+			transition: 1s;
+			
+			&:hover {
+				letter-spacing: 4px;
+			}
+			
+			span {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 114%;
+					height: 100%;
+					border: 1px solid #3498db;
+					top: 0;
+					left: -20px;
+				}
+			}
+		}
+		h2 {
+			font-weight: 400;
+			margin: 0;
+			font-size: 64px;
+			color: #3498db;
+			font-weight: 700;
+		}
+		h5 {
+			font-weight: 400;
+			margin: 0;
+			color: #95a5a6;
+			font-weight: 700;
+		}
+		p {
+			width: 600px;
+			text-align: justify;
+			line-height: 26px;
+			color: #fff;
+		}
+		
+		.socmed {
+			margin-top: 40px;
+			display: flex;
+			gap: 20px;
+			align-items: center;
+		}
+		
+		.btn-next {
+			margin-top: 40px;
+
+			button {
+				display: inline-block;
+				font-size: 1em;
+				padding: 1em 4em;
+				border: 1px #e90100 solid;
+				border-radius: 11px;
+				position: relative;
+				background: transparent;
+				
+				&::after {
+					content: 'Next';
+					font-size: 1em;
+					padding: 1em 4em;
+					position: absolute;
+					display: block;
+					background: #e90100;
+					top: 0;
+					left: 0;
+					border-radius: 11px;
+					color: #ffff;
+					font-weight: 700;
+					cursor: pointer;
+					transition: all ease-in-out 0.5s;
+					transform: translate(10px, 10px);
+				}
+
+				&:hover {
+					&::after {
+						transform: translate(0, 0);
+						content: 'Next';
+						font-size: 1em;
+						padding: 1em 4em;
+						position: absolute;
+						display: block;
+						background: #e90100;
+						border-radius: 11px;
+						color: #ffff;
+						font-weight: 700;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		// @keyframes heightToFull {
+		// 	from {
+		// 		height: 50%;
+		// 	}
+		// 	to {
+		// 		height: 100%;
+		// 	}
+		// }
+
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	top: 0;
+		// 	right: 0;
+		// 	background: #34495e;
+		// 	z-index: -1;
+		// 	animation: heightToFull 1.4s;
+		// }
+	}
+}
+
+// animation
+.Introduction {
+	.my-picture {
+		img {
+			animation: slideToTop 1.4s;
+		}
+	}
+
+	.biodata {
+		h1 {
+			animation: slideToBottom 1.4s;
+			
+			span {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 114%;
+					height: 100%;
+					border: 1px solid #3498db;
+					top: 0;
+					left: -20px;
+					animation: slideToBottom 3s;
+				}
+			}
+		}
+		h2 {
+			animation: slideToBottom 1.6s;
+		}
+		h5 {
+			animation: slideToBottom 1.2s;
+		}
+		p {
+			animation: slideToBottom 1.8s;
+		}
+		
+		.socmed {
+			animation: slideToBottom 1.8s;
+		}
+		
+		.btn-next {
+			animation: slideToBottom 2s;
+		}
+
+		@keyframes heightToFull {
+			from {
+				height: 0;
+			}
+			to {
+				height: 100%;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			background: #34495e;
+			z-index: -1;
+			animation: heightToFull 1.4s;
+		}
+	}
+}
+
+.Introduction-out {
+	.my-picture {
+		img {
+			animation: slideOutToTop 1.4s;
+		}
+	}
+
+	.biodata {
+		h1 {
+			animation: slideOutToTop 1.4s;
+			
+			span {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 114%;
+					height: 100%;
+					border: 1px solid #3498db;
+					top: 0;
+					left: -20px;
+					animation: slideOutToTop 3s;
+				}
+			}
+		}
+		h2 {
+			animation: slideOutToTop 1.6s;
+		}
+		h5 {
+			animation: slideOutToTop 1.2s;
+		}
+		p {
+			animation: slideOutToTop 1.8s;
+		}
+		
+		.socmed {
+			animation: slideOutToTop 1.8s;
+		}
+		
+		.btn-next {
+			animation: slideOutToTop 2s;
+		}
+
+		@keyframes heightToNull {
+			from {
+				height: 100%;
+			}
+			to {
+				height: 0;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 0;
+			top: 0;
+			right: 0;
+			background: #34495e;
+			z-index: -1;
+			animation: heightToNull 1.4s;
+		}
+	}
+
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 1.4s, opacity 1.4s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .Introduction {
+		.my-picture {
+			img {
+				height: 50%;
+			}
+		}
+		.biodata {
+			margin: auto 0;
+
+			h1 {
+			font-size: 24px;
+			margin: 10px 0;
+			
+			&:hover {
+				letter-spacing: 4px;
+			}
+			
+			span {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 114%;
+					height: 100%;
+					border: 1px solid #3498db;
+					top: 0;
+					left: -8px;
+					animation: slideToBottom 3s;
+					}
+				}
+			}
+			h2 {
+				font-size: 18px;
+			}
+			h5 {
+				margin: 0;
+			}
+			p {
+				width: 100%;
+			}
+		}
+  }
+}
